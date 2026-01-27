@@ -1,0 +1,9 @@
+/* Importar archivos de estilos separados */
+@import './styles/global.css';
+@import './styles/navbar.css';
+@import './styles/welcome-section.css';
+@import './styles/about-section.css';
+@import './styles/projects-section.css';
+@import './styles/contact-section.css';
+@import './styles/footer.css';
+   
