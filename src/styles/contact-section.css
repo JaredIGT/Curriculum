@@ -3,11 +3,8 @@
   max-width: 1200px;
   margin: 3rem auto;
   color: white;
-  background: rgba(28, 22, 46, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 15px;
   padding: clamp(1.5rem, 3vw, 3rem);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
   display: grid;
   gap: 1.5rem;
 }
@@ -22,37 +19,134 @@
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
 }
 
-.contact-panel {
+.form-card {
   background: rgba(28, 22, 46, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 12px;
-  padding: 1.1rem;
+  padding: 2rem;
   display: grid;
-  gap: 0.9rem;
+  gap: 1.5rem;
 }
 
-.contact-location p {
+.form-label {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.form-head h3 {
+  margin: 0.5rem 0 1rem 0;
+  font-size: 1.8rem;
+}
+
+.form-head p {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
   display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: rgba(255, 255, 255, 0.8);
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form-group textarea {
+  grid-column: 1 / -1;
+}
+
+form {
+  display: grid;
+  gap: 1.2rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.9rem;
+  background: rgba(15, 10, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: white;
+  font-family: inherit;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(99, 102, 241, 0.7);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.35);
+}
+
+.contact-info-panel {
+  background: rgba(28, 22, 46, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.contact-info-panel h3 {
+  margin: 0;
+  font-size: 1.8rem;
 }
 
 .contact-links {
   display: grid;
-  gap: 0.6rem;
+  gap: 1rem;
 }
 
 .contact-chip {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 0.6rem;
-  align-items: center;
-  padding: 0.7rem 0.8rem;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.2rem;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 12px;
@@ -67,163 +161,66 @@
 }
 
 .icon-wrap {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 10px;
   display: grid;
   place-items: center;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.icon-wrap svg {
+  width: 24px;
+  height: 24px;
 }
 
 .chip-label {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
 }
 
 .chip-value {
   color: white;
   font-weight: 700;
+  margin: 0.25rem 0 0 0;
+}
+
+.map-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .map-wrap iframe {
   width: 100%;
-  height: clamp(240px, 40vw, 380px);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.form-card {
-  background: rgba(28, 22, 46, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 1.2rem;
-  display: grid;
-  gap: 1rem;
-}
-
-.form-head h3 {
-  margin-bottom: 0.2rem;
-}
-
-form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 0.75rem;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  background: rgba(15, 10, 30, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  color: white;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-textarea {
-  grid-column: 1 / -1;
-  min-height: 140px;
-  resize: vertical;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: rgba(99, 102, 241, 0.7);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-button {
-  width: fit-content;
-  padding: 0.9rem 1.4rem;
-  border-radius: 12px;
+  height: 320px;
   border: none;
-  font-weight: 700;
-  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-  color: #03101a;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.25);
-}
-
-.testimonials {
-  background: rgba(28, 22, 46, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 1.2rem;
-  display: grid;
-  gap: 1rem;
-}
-
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 0.9rem;
-}
-
-.testimonial-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 12px;
-  padding: 1rem;
-  display: grid;
-  gap: 0.5rem;
-  transition: transform 0.2s ease, border-color 0.25s ease;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(99, 102, 241, 0.5);
-}
-
-blockquote {
-  color: white;
-  line-height: 1.6;
-}
-
-.testimonial-name {
-  color: #a855f7;
-  font-weight: 700;
-}
-
-.testimonial-role {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.95rem;
-}
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.3rem 0.7rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.85rem;
-}
-
-.pill.accent {
-  color: #03101a;
-  background: linear-gradient(120deg, #6366f1 0%, #a855f7 100%);
-  border-color: transparent;
-  font-weight: 600;
 }
 
 @media (max-width: 768px) {
   #contact {
     width: 90%;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .form-card,
+  .contact-info-panel {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .map-wrap iframe {
+    height: 280px;
   }
 }

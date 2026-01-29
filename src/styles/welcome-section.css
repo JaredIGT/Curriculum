@@ -5,7 +5,25 @@
 
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: #6366f1 }
+  50% { border-color: #a855f7 }
+}
+
+@keyframes typeWriterLoop {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 100%;
+  }
+  50% {
+    width: 100%;
+  }
+  90% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
 }
 
 #welcome-section {
@@ -21,10 +39,15 @@
   padding-top: 8rem;
 }
 
+.home-content {
+  padding-left: 3rem;
+}
+
 .home-content > p:last-of-type {
-  font-size: clamp(1rem, 3vw, 1.3rem) !important;
+  font-size: clamp(1.05rem, 3vw, 1.4rem) !important;
   margin-bottom: 2rem !important;
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  line-height: 1.7 !important;
 }
 
 .home-content > p:first-of-type {
@@ -41,6 +64,7 @@
   text-align: start;
   margin: 1.5rem 0 1.5rem 2rem;
   font-size: 1.5rem;
+  text-align: center;
   width: 60%;
   background: 
     linear-gradient(transparent, transparent) padding-box, 
@@ -100,13 +124,16 @@
   color: white !important; 
   font-weight: 900 !important;
   font-size: clamp(1.6rem, 5vw, 2.5rem) !important;
-  max-width: 100% !important;
+  max-width: fit-content !important;
   overflow: hidden !important; 
-  border-right: 20px solid #6366f1 !important; 
   white-space: nowrap !important;
-  animation: blink-caret 0.75s step-end infinite !important;
+  animation: typeWriterLoop 8s steps(28, end) infinite, blink-caret 0.75s step-end infinite !important;
   margin: 0 !important;
   padding: 0 !important;
+  border-right: 3px solid #a855f7 !important;
+  padding-right: 8px !important;
+  display: inline-block !important;
+  position: relative;
 }
 
 a {

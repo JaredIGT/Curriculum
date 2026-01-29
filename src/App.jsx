@@ -4,6 +4,7 @@ import WelcomeSection from './components/WelcomeSection'
 import AboutSection from './components/AboutSection'
 import ProjectsSection from './components/ProjectsSection'
 import ContactSection from './components/ContactSection'
+import TestimonialSection from './components/TestimonialSection'
 import Footer from './components/Footer'
 import './index.css'
 
@@ -14,6 +15,7 @@ function App() {
       <WelcomeSection />
       <AboutSection />
       <ProjectsSection />
+      <TestimonialSection />
       <ContactSection />
       <Footer />
     </>
