@@ -2,10 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VCR+OSD+Mono&display=swap');
+
+/* Variables de Tipografías */
+:root {
+  --font-primary: "VCR OSD Mono", monospace;
+  --font-poppins: "Poppins", sans-serif;
+  --font-jetbrains: "JetBrains Mono", monospace;
+  --font-ibm-plex: "IBM Plex Mono", monospace;
+  --font-press-start: "Press Start 2P", monospace;
+  --font-fira-code: "Fira Code", monospace;
+  --font-inter: "Inter", sans-serif;
+}
 
 /* Reset global */
 * {
-    font-family: "Poppins", monospace;
+    font-family: var(--font-primary);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -64,9 +78,9 @@ a {
 
 /* Títulos */
 .subtitle {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-press-start);
   font-size: 1.8rem;
-  font-weight: 900;
+  font-weight: 400;
   letter-spacing: 0.25rem;
   background: linear-gradient(to right,  #6366f1, #a855f7);
   -webkit-background-clip: text;
@@ -77,10 +91,10 @@ a {
 }
 
 .title{
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-press-start);
   text-transform: uppercase;
   font-size: 2.5rem;
-  font-weight: 900;
+  font-weight: 400;
   letter-spacing: 0.15rem;
   background: linear-gradient(to right,  #6366f1, #a855f7);
   -webkit-background-clip: text;

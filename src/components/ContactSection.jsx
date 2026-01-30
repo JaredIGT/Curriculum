@@ -50,14 +50,13 @@ export default function ContactSection() {
         className="contact-header"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
       >
-        <h2 className="title">Let's Discuss Your Project</h2>
-        <p className="muted">Get in touch with us for any kind of help. We are here to give you the best and also here to help you find your projects.</p>
+        <h2 className="title">Get in Touch</h2>
       </motion.div>
 
-      <motion.div className="contact-grid" variants={container} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
+      <motion.div className="contact-grid" variants={container} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.2 }}>
         <motion.div className="form-card" variants={item}>
           <div className="form-head">
             <span className="form-label">GET IN TOUCH</span>

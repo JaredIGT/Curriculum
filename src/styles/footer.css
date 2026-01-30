@@ -15,7 +15,7 @@ footer {
   align-self: start;
   text-align: center;
   font-weight: 900;
-  font-family: "JetBrains Mono";
+  font-family: var(--font-jetbrains);
   letter-spacing: 0.15rem;
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.95);
@@ -36,7 +36,7 @@ footer p {
 
 footer p:last-of-type{
   font-weight: 900;
-  font-family: "JetBrains Mono";
+  font-family: var(--font-jetbrains);
   letter-spacing: 0.15rem;
   justify-self: end;
   font-size: 0.80rem;

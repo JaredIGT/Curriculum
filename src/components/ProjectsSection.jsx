@@ -108,7 +108,7 @@ export default function ProjectsSection() {
         className="projects-header"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.4 }}
+        viewport={{ once: false, amount: 0.4 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
         <span className="eyebrow">Proyectos que disfruto construir</span>
@@ -125,7 +125,7 @@ export default function ProjectsSection() {
           className="category-tabs"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: false, amount: 0.4 }}
           transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
           {categories.map((category) => (
@@ -148,7 +148,7 @@ export default function ProjectsSection() {
         variants={gridVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.15 }}
+        viewport={{ once: false, amount: 0.15 }}
         key={activeCategory}
       >
         {filteredProjects.map((project) => (

@@ -4,7 +4,6 @@
   padding: 1rem clamp(1rem, 3vw, 3rem);
   width: 100%;
   position: fixed;
-  display: block;
   top: 0;
   left: 0;
   border-bottom: 1px solid transparent;
@@ -26,6 +25,10 @@
 
 .nav-brand {
   flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .nav-links {
@@ -33,7 +36,6 @@
   gap: clamp(20px, 3vw, 40px);
   justify-content: center;
   flex: 2.5;
-  flex-wrap: wrap;
 }
 
 .nav-links li {
@@ -45,63 +47,58 @@
   text-align: center;
   border-radius: 10px;
   padding: 0.25rem 1rem;
-  border: 2px solid transparent;
-  background: 
-    linear-gradient(black, black) padding-box, 
-    linear-gradient(to right, #6366f1, #a855f7) border-box;
+  border: 4px solid transparent;
+  background: linear-gradient(black, black) padding-box, 
+              linear-gradient(to right, #6366f1, #a855f7) border-box;
   transition: all 0.3s ease;
   min-width: max-content;
 }
 
-.nav-button:hover{
+.nav-button:hover {
   box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
   transform: scale(1.02);
 }
 
-.nav-follow{
+.nav-follow {
+  font-family: var(--font-press-start);
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: white;
   font-weight: 700;
-  padding: 0px;
+  padding: 0.5rem;
+  
 }
 
 #nav-name {
-  font-family: "Inter", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 900;
-  letter-spacing: 0.25rem;
-  background: linear-gradient(to right,  #6366f1, #a855f7);
+  font-family: var(--font-press-start);
+  font-weight: bolder;
+  font-size: 1.8rem;
+  background: linear-gradient(to right, #6366f1, #a855f7);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   white-space: nowrap;
+  margin: 0;
 }
 
-#nav-logo{
-  position: relative;
-  top: 15px;
-}
 
-.nav-options{
+
+.nav-options {
   text-transform: uppercase;
   position: relative;
   color: white;
   margin-left: 1rem;
-  font-weight: 700;
   text-decoration: none;
-  font-size: 1rem;
-  flex-wrap: wrap;
+  font-size: 0.8rem;
+  font-family: var(--font-press-start);
 }
 
 .nav-options:hover,
 .nav-options:active {
-  background: linear-gradient(to right,  #6366f1, #a855f7);
+  background: linear-gradient(to right, #6366f1, #a855f7);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  white-space: nowrap;
-  transform: translateY(3px);
 }
 
 .nav-options::after {
@@ -111,9 +108,7 @@
   left: 0;
   width: 0;
   height: 3px;
-  border: 1px solid transparent;
-  background: 
-    linear-gradient(to right, #6366f1, #a855f7) ;
+  background: linear-gradient(to right, #6366f1, #a855f7);
   transition: width 0.3s ease;
 }
 
@@ -121,7 +116,6 @@
   width: 100%;
 }
 
-/* Hamburger oculto en escritorio */
 .hamburger {
   display: none;
 }
@@ -129,14 +123,12 @@
 .mobile-menu {
   display: none;
 }
-
-/* Responsive */
 @media (max-width: 768px) {
-  .nav-links{
+  .nav-links {
     display: none;
   }
 
-  #navbar{
+  #navbar {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-around;
@@ -189,6 +181,7 @@
     padding: 0.75rem 1rem;
     border-radius: 8px;
     transition: all 0.3s ease;
+    font-family: "VCR OSD Mono", monospace !important;
   }
 
   .mobile-menu .nav-options:hover {
@@ -210,9 +203,7 @@
 
 @media (max-width: 480px) {
   #navbar {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    flex-direction: column;
     align-items: start;
     row-gap: 2rem;
     width: 100vw;

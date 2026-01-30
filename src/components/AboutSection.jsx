@@ -31,54 +31,71 @@ export default function AboutSection() {
   return (
     <section id="about">
       <motion.div
-        className="about-header"
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        className="about-container"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.5 }}
       >
-        <h2 className="title">About Me</h2>
-        <p>
-          I am currently training as an engineering professional, with a strong interest in software development and data science.
-          I have a solid foundation in data structures, algorithms, computer networks, and embedded systems. I am known for my
-          analytical skills, consistency, and sense of responsibility. I approach every technical challenge with determination and
-          focus, always aiming to deliver efficient solutions in demanding technological environments.
-        </p>
-      </motion.div>
+        {/* Header con título retro style */}
+        <div className="about-header-retro">
+          <h2 className="title">ABOUT ME</h2>
+        </div>
 
-      <motion.div
-        className="about-grid"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <motion.article className="info-card" variants={cardVariants}>
-          <div className="card-head">
-            <span className="pill accent">Work Experience</span>
-          </div>
-          <div className="card-body">
-            <h3>Santa Priscila</h3>
-            <p className="muted">Training of Web Developer.</p>
-            <p>Responsible for the development of the Logistics module of the ERP.</p>
-          </div>
-        </motion.article>
+        {/* Contenido principal con dos columnas */}
+        <div className="about-content-wrapper">
+          {/* Columna izquierda - Texto */}
+          <motion.div
+            className="about-text-column"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <p>
+              I am currently training as an engineering professional, with a strong interest in software development and data science.
+              I have a solid foundation in data structures, algorithms, computer networks, and embedded systems. I am known for my
+              analytical skills, consistency, and sense of responsibility. I approach every technical challenge with determination and
+              focus, always aiming to deliver efficient solutions in demanding technological environments.
+            </p>
+          </motion.div>
 
-        <motion.article className="info-card" variants={cardVariants}>
-          <div className="card-head">
-            <span className="pill accent">Studies</span>
-          </div>
-          <div className="edu-list">
-            <div className="edu-item">
-              <h3>Unidad Educativa Montepiedra</h3>
-              <p className="muted">Technical High School Diploma in IT Services</p>
-            </div>
-            <div className="edu-item">
-              <h3>Escuela Superior Politecnica Litoral</h3>
-              <p className="muted">Bachelor of Computer Engineering</p>
-            </div>
-          </div>
-        </motion.article>
+          {/* Columna derecha - Cards */}
+          <motion.div
+            className="about-cards-column"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.2 }}
+          >
+            <motion.article className="info-card" variants={cardVariants}>
+              <div className="card-head">
+                <span className="pill accent">Work Experience</span>
+              </div>
+              <div className="card-body">
+                <h3>Santa Priscila</h3>
+                <p className="muted">Training of Web Developer.</p>
+                <p>Responsible for the development of the Logistics module of the ERP.</p>
+              </div>
+            </motion.article>
+
+            <motion.article className="info-card" variants={cardVariants}>
+              <div className="card-head">
+                <span className="pill accent">Studies</span>
+              </div>
+              <div className="edu-list">
+                <div className="edu-item">
+                  <h3>Unidad Educativa Montepiedra</h3>
+                  <p className="muted">Technical High School Diploma in IT Services</p>
+                </div>
+                <div className="edu-item">
+                  <h3>Escuela Superior Politecnica Litoral</h3>
+                  <p className="muted">Bachelor of Computer Engineering</p>
+                </div>
+              </div>
+            </motion.article>
+          </motion.div>
+        </div>
       </motion.div>
 
       <motion.div
@@ -86,7 +103,7 @@ export default function AboutSection() {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: false, amount: 0.2 }}
       >
         <div className="skills-head">
           <h3 className="subtitle">Skill Tech</h3>

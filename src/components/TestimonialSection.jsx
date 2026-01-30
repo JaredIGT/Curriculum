@@ -36,14 +36,14 @@ export default function TestimonialSection() {
         className="testimonial-header"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
       >
         <h2 className="title">Testimonials</h2>
         <p className="muted">What my colleagues and mentors say about my work</p>
       </motion.div>
 
-      <motion.div className="testimonials" variants={container} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
+      <motion.div className="testimonials" variants={container} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.2 }}>
         <div className="testimonial-grid">
           {testimonials.map((t) => (
             <motion.article key={t.name} className="testimonial-card" variants={item}>
