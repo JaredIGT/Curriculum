@@ -11,8 +11,8 @@ const projects = [
       "Proyecto para el NASA Space Apps Challenge que explora la posibilidad de vida en Titán combinando simulaciones y análisis de datos científicos.",
     image: "/img/project2.png",
     tech: ["godot", "csharp"],
-    codeLink: "#",
-    demoLink: "#",
+    codeLink: "https://github.com/RobertoPatino1/Titan",
+    demoLink: "https://singularitycoders.itch.io/unknown-titan",
     category: "Game dev",
     highlight: "NASA Space Apps",
     featured: true,
@@ -21,14 +21,14 @@ const projects = [
   },
   {
     id: 2,
-    title: "PyWeekend Champion",
+    title: "A second chance",
     subtitle: "Game Development",
     description:
       "Videojuego ganador del hackathon PyWeekend en ESPOL, construido en Godot con foco en mecánicas ágiles y estética dinámica.",
     image: "/img/project.jpg",
     tech: ["godot", "csharp"],
-    codeLink: "#",
-    demoLink: "#",
+    codeLink: "https://bananahunter243.itch.io/a-second-chance",
+    demoLink: "https://bananahunter243.itch.io/a-second-chance",
     category: "Game dev",
     highlight: "Winner",
     featured: true,
@@ -43,8 +43,8 @@ const projects = [
       "Programa en ensamblador que determina si un número es primo usando optimizaciones de bajo nivel para mejorar el rendimiento.",
     image: "/img/project3.png",
     tech: ["assembly"],
-    codeLink: "#",
-    demoLink: "#",
+    codeLink: "https://github.com/lalitard/binaryConverter", 
+    demoLink: "https://github.com/lalitard/binaryConverter", 
     category: "Low-level",
     highlight: "Optimized",
     featured: false,
@@ -59,12 +59,92 @@ const projects = [
       "CLI para explicar e implementar RSA: generación de llaves, cifrado y descifrado con foco en claridad matemática y pruebas reproducibles.",
     image: "/img/project5.jpg",
     tech: ["python"],
-    codeLink: "#",
-    demoLink: "#",
+    codeLink: "https://github.com/JaredIGT/MasterHackRSA",
+    demoLink: "https://github.com/JaredIGT/MasterHackRSA",
     category: "Security",
     highlight: "Educational",
     featured: false,
     year: "2023",
+    status: "Completed"
+  },
+  {
+    id: 5,
+    title: "iSponsor",
+    subtitle: "Web Application",
+    description:
+      "Plataforma web para conectar patrocinadores con eventos y proyectos. Construida con React y Supabase, permitiendo a usuarios buscar oportunidades de patrocinio y gestionar contribuciones.",
+    image: "/img/project4.png",
+    tech: ["react", "supabase", "javascript"],
+    codeLink: "https://github.com/jaredigt/iSponsor",
+    demoLink: "https://github.com/jaredigt/iSponsor",
+    category: "Web",
+    highlight: "Full Stack",
+    featured: true,
+    year: "2024",
+    status: "In Progress"
+  },
+  {
+    id: 6,
+    title: "Weather Dashboard",
+    subtitle: "Real-time Data Visualization",
+    description:
+      "Dashboard interactivo de clima en tiempo real. Desarrollado con React y Material-UI, integra datos meteorológicos en vivo con una interfaz intuitiva, responsive y componentes avanzados de visualización de datos.",
+    image: "/img/project6.png",
+    tech: ["react", "materialui", "typescript"],
+    codeLink: "https://github.com/JaredIGT/dashboard",
+    demoLink: "https://jaredigt.github.io/dashboard/",
+    category: "Web",
+    highlight: "Real-time",
+    featured: true,
+    year: "2024",
+    status: "Completed"
+  },
+  {
+    id: 7,
+    title: "EcoWarning",
+    subtitle: "Environmental Alert System",
+    description:
+      "Sistema de alerta ambiental que monitorea y notifica sobre cambios en el ambiente. Proyecto colaborativo enfocado en la sostenibilidad y la conciencia ecológica.",
+    image: "/img/ecowarning.png",
+    tech: ["vue", "php"],
+    codeLink: "https://github.com/Dalay20/EcoWarning",
+    demoLink: "#",
+    category: "Web",
+    highlight: "Environmental",
+    featured: false,
+    year: "2024",
+    status: "In Progress"
+  },
+  {
+    id: 8,
+    title: "Lexic Analizador GO",
+    subtitle: "Lexical Analyzer",
+    description:
+      "Analizador léxico desarrollado en Go con PLY (Python Lex-Yacc). Realiza análisis sintáctico y léxico de código fuente, generando tokens y reportes de errores.",
+    image: "/img/lexic-analizador.png",
+    tech: ["go", "python"],
+    codeLink: "https://github.com/JaredIGT/LexicAnalizerGO",
+    demoLink: "#",
+    category: "Compiler",
+    highlight: "Parser",
+    featured: false,
+    year: "2023",
+    status: "Completed"
+  },
+  {
+    id: 9,
+    title: "Landing Page",
+    subtitle: "Modern Web Design",
+    description:
+      "Landing page moderna y responsiva desarrollada con Firebase para backend y Tailwind CSS para estilos. Diseño limpio y optimizado para conversiones.",
+    image: "/img/project7.png",
+    tech: ["firebase", "tailwind", "html"],
+    codeLink: "https://github.com/JoseMurillo2711/landing",
+    demoLink: "https://landing-beige-alpha-40.vercel.app/",
+    category: "Web",
+    highlight: "Modern Design",
+    featured: false,
+    year: "2024",
     status: "Completed"
   }
 ];
@@ -89,6 +169,51 @@ const techIcons = {
     label: "Python",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     color: "#3776ab"
+  },
+  react: {
+    label: "React",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    color: "#61dafb"
+  },
+  materialui: {
+    label: "Material-UI",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+    color: "#007fff"
+  },
+  supabase: {
+    label: "Supabase",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg",
+    color: "#3ecf8e"
+  },
+  firebase: {
+    label: "Firebase",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+    color: "#ffa726"
+  },
+  typescript: {
+    label: "TypeScript",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    color: "#3178c6"
+  },
+  javascript: {
+    label: "JavaScript",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    color: "#f7df1e"
+  },
+  go: {
+    label: "Go",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
+    color: "#00add8"
+  },
+  tailwind: {
+    label: "Tailwind CSS",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+    color: "#06b6d4"
+  },
+  html: {
+    label: "HTML",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    color: "#e34c26"
   }
 };
 

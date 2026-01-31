@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&family=Poppins:wght@400;600&display=swap');
+﻿
 
 /* ========================================
    BASE STYLES
@@ -58,20 +58,6 @@
   }
 }
 
-@keyframes glitch {
-  0%, 90%, 100% { 
-    transform: translate(0);
-  }
-  91% { 
-    transform: translate(-2px, 2px);
-  }
-  92% { 
-    transform: translate(2px, -2px);
-  }
-  93% { 
-    transform: translate(0);
-  }
-}
 
 @keyframes bounce {
   0%, 100% { 
@@ -133,7 +119,7 @@
 }
 
 .vertical-label span {
-  font-family: 'VT323', monospace;
+  font-family: var(--font-vt323);
   font-size: 1.5rem;
   letter-spacing: 0.3em;
   font-weight: 400;
@@ -151,7 +137,7 @@
 }
 
 .history-text p {
-  font-family: 'Space Mono', monospace;
+  font-family: var(--font-space-mono);
   font-size: 0.95rem;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.9);
@@ -174,10 +160,11 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  
 }
 
 .about-title-massive {
-  font-family: 'VT323', monospace;
+  font-family: var(--font-vt323);
   font-size: clamp(5rem, 15vw, 12rem);
   font-weight: 400;
   line-height: 0.9;
@@ -191,7 +178,6 @@
   text-shadow: 
     4px 4px 0 rgba(0, 0, 0, 0.8),
     8px 8px 0 rgba(99, 102, 241, 0.3);
-  animation: glitch 5s infinite;
   position: relative;
 }
 
@@ -230,7 +216,7 @@
 }
 
 .card-badge {
-  font-family: 'VT323', monospace;
+  font-family: var(--font-vt323);
   font-size: 1.5rem;
   color: white;
   text-transform: uppercase;
@@ -246,7 +232,7 @@
 }
 
 .card-body h3 {
-  font-family: 'Space Mono', monospace;
+  font-family: var(--font-space-mono);
   font-size: 1.3rem;
   color: #ffffff;
   margin: 0;
@@ -261,7 +247,7 @@
 }
 
 .card-body p {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-dm-sans);
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
   margin: 0;
@@ -323,32 +309,16 @@
     font-size: clamp(4rem, 12vw, 8rem);
   }
 
-  .block-header,
   .card-header {
     padding: 0.75rem 1.5rem;
   }
 
-  .block-label,
   .card-badge {
     font-size: 1.5rem;
   }
 
-  .block-content,
   .card-body {
     padding: 1.5rem;
-  }
-
-  .skills-block {
-    padding: 2rem 1.5rem;
-  }
-
-  .skills-title {
-    font-size: 2rem;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 0.75rem;
   }
 }
 
@@ -380,13 +350,5 @@
 
   .about-title-massive {
     font-size: clamp(3rem, 10vw, 6rem);
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .info-blocks-container {
-    gap: 1.5rem;
   }
 }

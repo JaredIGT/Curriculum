@@ -54,11 +54,6 @@ export default function AboutSection() {
           <motion.div className="grid-right" variants={itemVariants}>
             <div className="about-title-wrapper">
               <h2 className="about-title-massive">ABOUT</h2>
-              <div className="about-subtitle-arrow">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                  <path d="M30 10 L30 45 M15 30 L30 45 L45 30" stroke="white" strokeWidth="3" strokeLinecap="square"/>
-                </svg>
-              </div>
             </div>
           </motion.div>
         </motion.div>

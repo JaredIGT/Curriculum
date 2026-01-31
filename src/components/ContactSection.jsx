@@ -53,7 +53,7 @@ export default function ContactSection() {
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
       >
-        <h2 className="title">Get in Touch</h2>
+        <h2 className="title"> Let's Get in Touch</h2>
       </motion.div>
 
       <motion.div className="contact-grid" variants={container} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.2 }}>
@@ -61,7 +61,6 @@ export default function ContactSection() {
           <div className="form-head">
             <span className="form-label">GET IN TOUCH</span>
             <h3>Let's Discuss Projects</h3>
-            <p className="muted">Get in touch with us for any kind of help. We are here to give you the best and also here to help you find your projects.</p>
           </div>
           <form onSubmit={(e) => e.preventDefault()}>
             <div className="form-row">
