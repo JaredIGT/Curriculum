@@ -1,0 +1,155 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "welcome": {
+    "greeting": "Hi World, I'm",
+    "name": "Jared Gonzalez",
+    "title": "Student of Computer Science",
+    "subtitle": "Welcome to My Developer Portfolio",
+    "description": "Hello! I'm currently a student passionate about web development and data science, committed to creating innovative and practical technological solutions. This portfolio showcases my work, learning journey, and dedication to continuous improvement.",
+    "downloadCv": "Download CV"
+  },
+  "about": {
+    "history": "HISTORY",
+    "about": "ABOUT",
+    "historyText1": "My interest in technology has been shaped by how software can solve everyday problems and generate an impact on people",
+    "historyText2": "I work with an analytical and disciplined mindset, focused on learning continuously and building well-structured, creative and functional solutions.",
+    "workExperience": "Work Experience",
+    "studies": "Studies",
+    "trainingWebDeveloper": "Web Developer Internships",
+    "responsibleLogistics": "Responsible for the development of the Logistics Report and Product Report modules of the ERP of Santa Priscila using technologies such as Vue and Laravel.",
+    "highSchoolDiploma": "Technical High School Diploma in IT Services",
+    "bachelorDegree": "Bachelor of Computer Science"
+  },
+  "skills": {
+    "techSkills": "Tech Skills",
+    "advanced": "Advanced",
+    "intermediate": "Intermediate",
+    "basic": "Basic"
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "A selection of my best work and experiments",
+    "category": "Category",
+    "year": "Year",
+    "status": "Status",
+    "viewCode": "View Code",
+    "viewDemo": "View Demo",
+    "completed": "Completed",
+    "projects": [
+      {
+        "title": "Unknown Titan",
+        "subtitle": "Game Development",
+        "description": "Project developed for the NASA Space Apps Challenge with Godot, focused on exploring the possibility of life on Titan through an interactive experience. The game integrates scientific data to capture children's attention.",
+        "category": "Game dev",
+        "highlight": "NASA Space Apps"
+      },
+      {
+        "title": "A Second Chance",
+        "subtitle": "Game Development",
+        "description": "Video game winner of the PyWeekend hackathon at ESPOL, built in Godot with a focus on agile mechanics and dynamic aesthetics. About SDG 15, where the player finds themselves in a dystopian future affected by climate change.",
+        "category": "Game dev",
+        "highlight": "Winner"
+      },
+      {
+        "title": "Prime Detector ASM",
+        "subtitle": "Low-level Programming",
+        "description": "Assembly program (MIPS) that determines if a number is prime using low-level optimizations to improve performance.",
+        "category": "Low-level",
+        "highlight": "Educational"
+      },
+      {
+        "title": "RSA CLI Tool",
+        "subtitle": "Cryptography",
+        "description": "CLI to explain and implement RSA: key generation, encryption and decryption with a focus on mathematical clarity and reproducible tests.",
+        "category": "Security",
+        "highlight": "Educational"
+      },
+      {
+        "title": "iSponsor",
+        "subtitle": "Web Application",
+        "description": "Web platform to connect with Donors and Sponsored individuals. Built with React and Supabase, allowing Sponsored individuals to search for sponsorship opportunities and Care Homes to manage donations.",
+        "category": "Web",
+        "highlight": "Software"
+      },
+      {
+        "title": "Weather Dashboard",
+        "subtitle": "Real-time Data Visualization",
+        "description": "Interactive real-time weather dashboard. Developed with React and Material-UI, it integrates live weather data with an intuitive, responsive interface and advanced data visualization components.",
+        "category": "Web",
+        "highlight": "Real-time"
+      },
+      {
+        "title": "EcoWarning",
+        "subtitle": "Environmental Alert System",
+        "description": "Environmental alert system that monitors and notifies about environmental disasters in the environment. Collaborative project focused on sustainability and environmental awareness, developed with Vue.js and PHP.",
+        "category": "Web",
+        "highlight": "Environmental"
+      },
+      {
+        "title": "Lexic Analizador GO",
+        "subtitle": "Lexical Analyzer",
+        "description": "Lexical analyzer of Go developed with Python and its PLY (Python Lex-Yacc) library. Performs syntactic and lexical analysis of source code, generating tokens and error reports.",
+        "category": "Compilers",
+        "highlight": "Parser"
+      },
+      {
+        "title": "Landing Page",
+        "subtitle": "Modern Web Design",
+        "description": "Modern and responsive landing page developed with Firebase for backend and Tailwind CSS for styling. Clean design optimized for conversions with fluid animations.",
+        "category": "Web",
+        "highlight": "Modern Design"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "What my colleagues and mentors say about my work",
+    "testimonials": [
+      {
+        "quote": "Showed remarkable learning ability in a short time and applied it effectively to team projects.",
+        "name": "Marcos del Rosario",
+        "role": "Project Leader at Santa Priscila"
+      },
+      {
+        "quote": "He was a key figure in making technical decisions during project development.",
+        "name": "Jefferson Davalos",
+        "role": "Fullstack Developer at Ambiensa"
+      },
+      {
+        "quote": "He is known for his determination and unwavering commitment to delivering high-quality results in every task he undertakes",
+        "name": "Jose Zambrano",
+        "role": "Fullstack Developer at Ambiensa"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "If you want to contact me you can use these means or send me a message directly",
+    "formLabel": "GET IN TOUCH",
+    "firstName": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send",
+    "firstName_placeholder": "Your name *",
+    "email_placeholder": "Your email *",
+    "subject_placeholder": "Message subject *",
+    "message_placeholder": "Write your message here *",
+    "lets_discuss": "Leave me a message",
+    "lets_discuss_project": "My social networks",
+    "send_message": "Send Message",
+    "linkedin": "LinkedIn",
+    "email_label": "Email",
+    "phone": "Phone"
+  },
+  "footer": {
+    "copy": "© 2024 Jared Gonzalez. All rights reserved."
+  }
+}

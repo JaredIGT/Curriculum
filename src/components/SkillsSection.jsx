@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import "../styles/skills-section.css";
 
 const skills = [
@@ -21,11 +22,13 @@ const skills = [
   { name: "Ruby", level: "Basic", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg" },
   { name: "Go", level: "Basic", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" },
   { name: "Dart", level: "Basic", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-original.svg" },
+  { name: "R", level: "Basic", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/r/r-original.svg" },
   { name: "Firebase", level: "Basic", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg" },
   { name: "Supabase", level: "Basic", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg" }
 ];
 
 export default function SkillsSection() {
+  const { t } = useTranslation();
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
   return (
@@ -45,7 +48,7 @@ export default function SkillsSection() {
           viewport={{ once: false }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="title">Tech Skills</h2>
+          <h2 className="title">{t('skills.techSkills')}</h2>
         </motion.div>
         {/* Bottom Skills Grid with Details */}
         <motion.div 

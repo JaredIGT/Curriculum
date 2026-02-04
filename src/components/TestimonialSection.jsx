@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 const testimonials = [
   {
@@ -30,6 +31,8 @@ const item = {
 };
 
 export default function TestimonialSection() {
+  const { t } = useTranslation();
+  const testimonials = t('testimonials.testimonials', { returnObjects: true });
   return (
     <section id="testimonials">
       <motion.div
@@ -39,8 +42,8 @@ export default function TestimonialSection() {
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
       >
-        <h2 className="title">Testimonials</h2>
-        <p className="muted">What my colleagues and mentors say about my work</p>
+        <h2 className="title">{t('testimonials.title')}</h2>
+        <p className="muted">{t('testimonials.subtitle')}</p>
       </motion.div>
 
       <motion.div className="testimonials" variants={container} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.2 }}>

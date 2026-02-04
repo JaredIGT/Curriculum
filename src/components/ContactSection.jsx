@@ -1,4 +1,10 @@
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+
+// Initialize EmailJS
+emailjs.init("izChfcu1jUbn28SAu");
 
 const contacts = [
   {
@@ -44,6 +50,42 @@ const item = {
 };
 
 export default function ContactSection() {
+  const { t } = useTranslation();
+  const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccess(false);
+    setError(false);
+
+    try {
+      await emailjs.send("service_69pgt0l", "template_qcdczqq", {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message
+      });
+      
+      setSuccess(true);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      setTimeout(() => setSuccess(false), 5000);
+    } catch (err) {
+      console.error("Error sending email:", err);
+      setError(true);
+      setTimeout(() => setError(false), 5000);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <section id="contact">
       <motion.div
@@ -53,41 +95,71 @@ export default function ContactSection() {
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
       >
-        <h2 className="title"> Let's Get in Touch</h2>
+        <h2 className="title">{t('contact.title')}</h2>
+        <p>{t('contact.subtitle')}</p>
       </motion.div>
 
       <motion.div className="contact-grid" variants={container} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.2 }}>
         <motion.div className="form-card" variants={item}>
           <div className="form-head">
-            <span className="form-label">GET IN TOUCH</span>
-            <h3>Let's Discuss Projects</h3>
+            <span className="form-label">{t('contact.formLabel')}</span>
+            <h3>{t('contact.lets_discuss')}</h3>
           </div>
-          <form onSubmit={(e) => e.preventDefault()}>
+          <form onSubmit={handleSubmit}>
             <div className="form-row">
               <div className="form-group">
-                <label>First name</label>
-                <input type="text" name="name" placeholder="Name *" required />
+                <label>{t('contact.firstName')}</label>
+                <input 
+                  type="text" 
+                  name="name" 
+                  placeholder={t('contact.firstName_placeholder')} 
+                  value={formData.name}
+                  onChange={handleChange}
+                  required 
+                />
               </div>
               <div className="form-group">
-                <label>Your Email</label>
-                <input type="email" name="email" placeholder="Email *" required />
+                <label>{t('contact.email')}</label>
+                <input 
+                  type="email" 
+                  name="email" 
+                  placeholder={t('contact.email_placeholder')} 
+                  value={formData.email}
+                  onChange={handleChange}
+                  required 
+                />
               </div>
             </div>
             <div className="form-group">
-              <label>Subject</label>
-              <input type="text" name="subject" placeholder="Subject *" required />
+              <label>{t('contact.subject')}</label>
+              <input 
+                type="text" 
+                name="subject" 
+                placeholder={t('contact.subject_placeholder')} 
+                value={formData.subject}
+                onChange={handleChange}
+                required 
+              />
             </div>
             <div className="form-group">
-              <label>Your message</label>
-              <textarea name="message" rows="6" placeholder="Your message *" />
+              <label>{t('contact.message')}</label>
+              <textarea 
+                name="message" 
+                rows="6" 
+                placeholder={t('contact.message_placeholder')}
+                value={formData.message}
+                onChange={handleChange}
+              />
             </div>
-            <button type="submit" className="submit-btn">Send Message</button>
+            {success && <p style={{ color: "#10b981", marginBottom: "1rem" }}>✓ Mensaje enviado correctamente</p>}
+            {error && <p style={{ color: "#ef4444", marginBottom: "1rem" }}>✗ Error al enviar el mensaje</p>}
+            <button type="submit" className="submit-btn" disabled={loading}>
+              {loading ? "Enviando..." : t('contact.send_message')}
+            </button>
           </form>
         </motion.div>
 
-        <motion.div className="contact-info-panel" variants={item}>
-          <h3>Let's Discuss Your Project</h3>
-          
+        <motion.div className="contact-info-panel" variants={item}>          
           <div className="contact-links">
             {contacts.map((c) => (
               <a key={c.label} href={c.href} target="_blank" rel="noopener noreferrer" className="contact-chip">

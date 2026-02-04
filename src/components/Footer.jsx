@@ -1,8 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import '../styles/footer.css'
+
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer>
-      <p>&copy; 2025 Jared Gonzalez | Portfolio. All rights reserved. Privacy Policy Terms of Service.</p>
+      <p>{t('footer.copy')}</p>
       <p>
         Made with Determination by JIGT 
         <svg id="nav-logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" fill="white" width="50" height="50" viewBox="0 0 30 30" style={{marginLeft: '0.5rem'}}>

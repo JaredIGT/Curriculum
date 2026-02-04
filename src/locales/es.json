@@ -1,0 +1,155 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "testimonials": "Testimonios",
+    "contact": "Contacto"
+  },
+  "welcome": {
+    "greeting": "Hola Mundo, soy",
+    "name": "Jared Gonzalez",
+    "title": "Estudiante de Ing. en Computacion",
+    "subtitle": "Bienvenido a Mi Portafolio de Desarrollador",
+    "description": "¡Hola! Actualmente soy estudiante apasionado por desarrollo web y ciencia de datos, comprometido con crear soluciones tecnológicas innovadoras y prácticas. Este portafolio muestra mi trabajo, mi trayectoria de aprendizaje y mi dedicación a la mejora continua.",
+    "downloadCv": "Descargar CV"
+  },
+  "about": {
+    "history": "HISTORIA",
+    "about": "ACERCA",
+    "historyText1": "Mi interés por la tecnología se ha formado a partir de como el software puede llegar a solucionar problemas cotidianos y como genera un impacto en las personas",
+  "historyText2": "Trabajo con una mentalidad analítica y disciplinada, enfocado en aprender de forma continua y construir soluciones bien estructuradas, creativas y funcionales.",
+    "workExperience": "Experiencia Laboral",
+    "studies": "Estudios",
+    "trainingWebDeveloper": "Pasantías de Desarrollador Web",
+    "responsibleLogistics": "Responsable del desarrollo del módulo de Reporte de Logística y Reporte de Producto del ERP de Santa Priscila Usando tecnologias como Vue y Laravel.",
+    "highSchoolDiploma": "Bachiller Técnico en Servicios de Informática",
+    "bachelorDegree": "Ingeniería de Sistemas de Computación"
+  },
+  "skills": {
+    "techSkills": "Habilidades Tecnicas",
+    "advanced": "Avanzado",
+    "intermediate": "Intermedio",
+    "basic": "Básico"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Una selección de mi mejor trabajo y experimentos",
+    "category": "Categoría",
+    "year": "Año",
+    "status": "Estado",
+    "viewCode": "Ver Código",
+    "viewDemo": "Ver Demo",
+    "completed": "Completado",
+    "projects": [
+      {
+        "title": "Unknown Titan",
+        "subtitle": "Desarrollo de Juegos",
+        "description": "Proyecto desarrollado para el NASA Space Apps Challenge con Godot, enfocado en explorar la posibilidad de vida en Titán mediante una experiencia interactiva. El juego integra de datos científicos para captar la atencion de los niños.",
+        "category": "Desarrollo de juegos",
+        "highlight": "NASA Space Apps"
+      },
+      {
+        "title": "A Second Chance",
+        "subtitle": "Desarrollo de Juegos",
+        "description": "Videojuego ganador del hackathon PyWeekend en ESPOL, construido en Godot con foco en mecánicas ágiles y estética dinámica. Sobre el ODS 15, donde el jugador se encuentra en un futuro distópico afectado por el cambio climático.",
+        "category": "Desarrollo de juegos",
+        "highlight": "Ganador"
+      },
+      {
+        "title": "Prime Detector ASM",
+        "subtitle": "Programación de Bajo Nivel",
+        "description": "Programa en ensamblador (MIPS) que determina si un número es primo usando optimizaciones de bajo nivel para mejorar el rendimiento.",
+        "category": "Bajo nivel",
+        "highlight": "Educativo"
+      },
+      {
+        "title": "RSA CLI Tool",
+        "subtitle": "Criptografía",
+        "description": "CLI para explicar e implementar RSA: generación de llaves, cifrado y descifrado con foco en claridad matemática y pruebas reproducibles.",
+        "category": "Seguridad",
+        "highlight": "Educativo"
+      },
+      {
+        "title": "iSponsor",
+        "subtitle": "Aplicación Web",
+        "description": "Plataforma web para conectar con Donadores y Apadrinados. Construida con React y Supabase, permitiendo a Apadrinados buscar oportunidades de patrocinio y a Casas Hogar gestionar donaciones.",
+        "category": "Web",
+        "highlight": "Software"
+      },
+      {
+        "title": "Weather Dashboard",
+        "subtitle": "Visualización de Datos en Tiempo Real",
+        "description": "Dashboard interactivo de clima en tiempo real. Desarrollado con React y Material-UI, integra datos meteorológicos en vivo con una interfaz intuitiva, responsive y componentes avanzados de visualización de datos.",
+        "category": "Web",
+        "highlight": "Tiempo Real"
+      },
+      {
+        "title": "EcoWarning",
+        "subtitle": "Sistema de Alerta Ambiental",
+        "description": "Sistema de alerta ambiental que monitorea y notifica sobre desastres ambientales en el entorno. Proyecto colaborativo enfocado en la sostenibilidad y la conciencia ecológica, desarrollado con Vue.js y PHP.",
+        "category": "Web",
+        "highlight": "Ambiental"
+      },
+      {
+        "title": "Lexic Analizador GO",
+        "subtitle": "Analizador Léxico",
+        "description": "Analizador léxico de Go desarrollado con Python y su biblioteca PLY (Python Lex-Yacc). Realiza análisis sintáctico y léxico de código fuente, generando tokens y reportes de errores.",
+        "category": "Compiladores",
+        "highlight": "Parser"
+      },
+      {
+        "title": "Landing Page",
+        "subtitle": "Diseño Web Moderno",
+        "description": "Landing page moderna y responsiva desarrollada con Firebase para backend y Tailwind CSS para estilos. Diseño limpio y optimizado para conversiones con animaciones fluidas.",
+        "category": "Web",
+        "highlight": "Landing Page"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "subtitle": "Lo que mis colegas y mentores dicen de mi trabajo",
+    "testimonials": [
+      {
+        "quote": "Mostró una capacidad de aprendizaje notable en poco tiempo y la aplicó efectivamente en proyectos del equipo.",
+        "name": "Marcos del Rosario",
+        "role": "Líder de Proyecto en Santa Priscila"
+      },
+      {
+        "quote": "Muestra siempre ideas creativas las cuales ayudan a resolver problemas de una manera efectiva.",
+        "name": "Jefferson Davalos",
+        "role": "Desarrollador Fullstack en Ambiensa"
+      },
+      {
+        "quote": "Es conocido por su determinación y compromiso inquebrantable de entregar resultados de alta calidad en cada tarea que emprende",
+        "name": "Jose Zambrano",
+        "role": "Desarrollador Fullstack en ESMENA"
+      }
+    ]
+  },
+ "contact": {
+  "title": "Contactame",
+  "subtitle": "Si me quieres contactar puedes usar estos medios o enviarme un mensaje directamente",
+  "formLabel": "PONTE EN CONTACTO",
+  "firstName": "Nombre",
+  "email": "Correo electrónico",
+  "subject": "Asunto",
+  "message": "Mensaje",
+  "send": "Enviar",
+  "firstName_placeholder": "Tu nombre *",
+  "email_placeholder": "Tu correo electrónico *",
+  "subject_placeholder": "Asunto del mensaje *",
+  "message_placeholder": "Escribe tu mensaje aquí *",
+  "lets_discuss": "Dejame un mensaje",
+  "lets_discuss_project": "Mis redes sociales",
+  "send_message": "Enviar mensaje",
+  "linkedin": "LinkedIn",
+  "email_label": "Correo",
+  "phone": "Teléfono"
+},
+  "footer": {
+    "copy": "© 2024 Jared Gonzalez. Todos los derechos reservados."
+  }
+}

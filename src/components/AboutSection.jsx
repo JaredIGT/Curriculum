@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 const containerVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -15,6 +16,7 @@ const itemVariants = {
 };
 
 export default function AboutSection() {
+  const { t } = useTranslation();
   return (
     <section id="about">
       <motion.div
@@ -35,17 +37,15 @@ export default function AboutSection() {
           {/* Left Section - A LITTLE HISTORY */}
           <motion.div className="grid-left" variants={itemVariants}>
             <div className="vertical-label">
-              <span>HISTORY</span>
+              <span>{t('about.history')}</span>
               
             </div>
             <div className="history-text">
               <p>
-                I am currently training as an engineering professional, with a strong interest in software development and data science.
-                I have a solid foundation in data structures, algorithms, computer networks, and embedded systems.
+                {t('about.historyText1')}
               </p>
               <p>
-                I am known for my analytical skills, consistency, and sense of responsibility. I approach every technical challenge with 
-                determination and focus, always aiming to deliver efficient solutions in demanding technological environments.
+                {t('about.historyText2')}
               </p>
             </div>
           </motion.div>
@@ -53,7 +53,7 @@ export default function AboutSection() {
           {/* Right Section - ABOUT Title */}
           <motion.div className="grid-right" variants={itemVariants}>
             <div className="about-title-wrapper">
-              <h2 className="about-title-massive">ABOUT</h2>
+              <h2 className="about-title-massive">{t('about.about')}</h2>
             </div>
           </motion.div>
         </motion.div>
@@ -68,27 +68,27 @@ export default function AboutSection() {
         >
           <motion.article className="retro-card" variants={itemVariants}>
             <div className="card-header">
-              <span className="card-badge">Work Experience</span>
+              <span className="card-badge">{t('about.workExperience')}</span>
             </div>
             <div className="card-body">
               <h3>Santa Priscila</h3>
-              <p className="card-subtitle">Training of Web Developer</p>
-              <p>Responsible for the development of the Logistics module of the ERP.</p>
+              <p className="card-subtitle">{t('about.trainingWebDeveloper')}</p>
+              <p>{t('about.responsibleLogistics')}</p>
             </div>
           </motion.article>
 
           <motion.article className="retro-card" variants={itemVariants}>
             <div className="card-header">
-              <span className="card-badge">Studies</span>
+              <span className="card-badge">{t('about.studies')}</span>
             </div>
             <div className="card-body">
               <div className="edu-item">
                 <h3>Unidad Educativa Montepiedra</h3>
-                <p className="card-subtitle">Technical High School Diploma in IT Services</p>
+                <p className="card-subtitle">{t('about.highSchoolDiploma')}</p>
               </div>
               <div className="edu-item">
                 <h3>Escuela Superior Politecnica Litoral</h3>
-                <p className="card-subtitle">Bachelor of Computer Engineering</p>
+                <p className="card-subtitle">{t('about.bachelorDegree')}</p>
               </div>
             </div>
           </motion.article>

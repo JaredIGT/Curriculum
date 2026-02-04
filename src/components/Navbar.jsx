@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -79,25 +81,25 @@ export default function Navbar() {
               className="nav-options"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-            >Home</motion.a></li>
+            >{t('navbar.home')}</motion.a></li>
             <li><motion.a 
               href="#about" 
               className="nav-options"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-            >About</motion.a></li>
+            >{t('navbar.about')}</motion.a></li>
             <li><motion.a 
               href="#projects" 
               className="nav-options"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-            >Projects</motion.a></li>
+            >{t('navbar.projects')}</motion.a></li>
             <li><motion.a 
               href="#contact" 
               className="nav-options"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-            >Contact Me</motion.a></li>
+            >{t('navbar.contact')}</motion.a></li>
           </div>
 
           <li className="nav-button"> 
@@ -135,16 +137,16 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
           >
             <motion.li custom={0} variants={menuItemVariants} animate={menuOpen ? 'open' : 'closed'}>
-              <a href="#welcome-section" className="nav-options mobile" onClick={closeMenu}>Home</a>
+              <a href="#welcome-section" className="nav-options mobile" onClick={closeMenu}>{t('navbar.home')}</a>
             </motion.li>
             <motion.li custom={1} variants={menuItemVariants} animate={menuOpen ? 'open' : 'closed'}>
-              <a href="#about" className="nav-options mobile" onClick={closeMenu}>About</a>
+              <a href="#about" className="nav-options mobile" onClick={closeMenu}>{t('navbar.about')}</a>
             </motion.li>
             <motion.li custom={2} variants={menuItemVariants} animate={menuOpen ? 'open' : 'closed'}>
-              <a href="#projects" className="nav-options mobile" onClick={closeMenu}>Projects</a>
+              <a href="#projects" className="nav-options mobile" onClick={closeMenu}>{t('navbar.projects')}</a>
             </motion.li>
             <motion.li custom={3} variants={menuItemVariants} animate={menuOpen ? 'open' : 'closed'}>
-              <a href="#contact" className="nav-options mobile" onClick={closeMenu}>Contact Me</a>
+              <a href="#contact" className="nav-options mobile" onClick={closeMenu}>{t('navbar.contact')}</a>
             </motion.li>
             <motion.li custom={4} variants={menuItemVariants} animate={menuOpen ? 'open' : 'closed'}>
               <a 

@@ -1,15 +1,16 @@
+import { useTranslation } from 'react-i18next';
+
 export default function WelcomeSection() {
+  const { t } = useTranslation();
   return (
     <section id="welcome-section">
       <div className="home-content"> 
-        <p className="bolder-text">Hi World, I'm</p>
-        <h1>Jared Gonzalez</h1>
-        <p className="animated-text">${"Student of Computer Science"}</p>
-        <h3>Welcome to My Developer Portfolio</h3>
+        <p className="bolder-text">{t('welcome.greeting')}</p>
+        <h1>{t('welcome.name')}</h1>
+        <p className="animated-text">${t('welcome.title')}</p>
+        <h3>{t('welcome.subtitle')}</h3>
         <p>
-          Hello! I'm currently a student passionate about web development and data science, 
-          committed to creating innovative and practical technological solutions. This portfolio 
-          showcases my work, learning journey, and dedication to continuous improvement.
+          {t('welcome.description')}
         </p>
         <div className="social-links">
           <a href="https://github.com/jaredigt" target="_blank" rel="noopener noreferrer">
@@ -50,7 +51,7 @@ export default function WelcomeSection() {
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
-          Download CV
+          {t('welcome.downloadCv')}
         </a>
       </div>
     </section>

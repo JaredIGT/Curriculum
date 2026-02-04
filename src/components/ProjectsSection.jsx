@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import "../styles/projects-section.css";
 
 const projects = [
@@ -7,8 +8,6 @@ const projects = [
     id: 1,
     title: "Unknown Titan",
     subtitle: "Game Development",
-    description:
-      "Proyecto para el NASA Space Apps Challenge que explora la posibilidad de vida en Titán combinando simulaciones y análisis de datos científicos.",
     image: "/img/project2.png",
     tech: ["godot", "csharp"],
     codeLink: "https://github.com/RobertoPatino1/Titan",
@@ -23,8 +22,6 @@ const projects = [
     id: 2,
     title: "A second chance",
     subtitle: "Game Development",
-    description:
-      "Videojuego ganador del hackathon PyWeekend en ESPOL, construido en Godot con foco en mecánicas ágiles y estética dinámica.",
     image: "/img/project.jpg",
     tech: ["godot", "csharp"],
     codeLink: "https://bananahunter243.itch.io/a-second-chance",
@@ -39,8 +36,6 @@ const projects = [
     id: 3,
     title: "Prime Detector ASM",
     subtitle: "Low-level Programming",
-    description:
-      "Programa en ensamblador que determina si un número es primo usando optimizaciones de bajo nivel para mejorar el rendimiento.",
     image: "/img/project3.png",
     tech: ["assembly"],
     codeLink: "https://github.com/lalitard/binaryConverter", 
@@ -55,8 +50,6 @@ const projects = [
     id: 4,
     title: "RSA CLI Tool",
     subtitle: "Cryptography",
-    description:
-      "CLI para explicar e implementar RSA: generación de llaves, cifrado y descifrado con foco en claridad matemática y pruebas reproducibles.",
     image: "/img/project5.jpg",
     tech: ["python"],
     codeLink: "https://github.com/JaredIGT/MasterHackRSA",
@@ -71,8 +64,6 @@ const projects = [
     id: 5,
     title: "iSponsor",
     subtitle: "Web Application",
-    description:
-      "Plataforma web para conectar patrocinadores con eventos y proyectos. Construida con React y Supabase, permitiendo a usuarios buscar oportunidades de patrocinio y gestionar contribuciones.",
     image: "/img/project4.png",
     tech: ["react", "supabase", "javascript"],
     codeLink: "https://github.com/jaredigt/iSponsor",
@@ -80,15 +71,13 @@ const projects = [
     category: "Web",
     highlight: "Full Stack",
     featured: true,
-    year: "2024",
-    status: "In Progress"
+    year: "2025",
+    status: "Completed"
   },
   {
     id: 6,
     title: "Weather Dashboard",
     subtitle: "Real-time Data Visualization",
-    description:
-      "Dashboard interactivo de clima en tiempo real. Desarrollado con React y Material-UI, integra datos meteorológicos en vivo con una interfaz intuitiva, responsive y componentes avanzados de visualización de datos.",
     image: "/img/project6.png",
     tech: ["react", "materialui", "typescript"],
     codeLink: "https://github.com/JaredIGT/dashboard",
@@ -96,55 +85,49 @@ const projects = [
     category: "Web",
     highlight: "Real-time",
     featured: true,
-    year: "2024",
+    year: "2025",
     status: "Completed"
   },
   {
     id: 7,
     title: "EcoWarning",
     subtitle: "Environmental Alert System",
-    description:
-      "Sistema de alerta ambiental que monitorea y notifica sobre cambios en el ambiente. Proyecto colaborativo enfocado en la sostenibilidad y la conciencia ecológica.",
-    image: "/img/ecowarning.png",
+    image: "/img/project8.png",
     tech: ["vue", "php"],
-    codeLink: "https://github.com/Dalay20/EcoWarning",
-    demoLink: "#",
+    codeLink: "https://github.com/JaredIGT/EcoWarning",
+    demoLink: "https://github.com/JaredIGT/EcoWarning",
     category: "Web",
     highlight: "Environmental",
     featured: false,
-    year: "2024",
-    status: "In Progress"
+    year: "2025",
+    status: "Completed"
   },
   {
     id: 8,
     title: "Lexic Analizador GO",
     subtitle: "Lexical Analyzer",
-    description:
-      "Analizador léxico desarrollado en Go con PLY (Python Lex-Yacc). Realiza análisis sintáctico y léxico de código fuente, generando tokens y reportes de errores.",
-    image: "/img/lexic-analizador.png",
+    image: "/img/project9.png",
     tech: ["go", "python"],
     codeLink: "https://github.com/JaredIGT/LexicAnalizerGO",
     demoLink: "#",
     category: "Compiler",
     highlight: "Parser",
     featured: false,
-    year: "2023",
+    year: "2025",
     status: "Completed"
   },
   {
     id: 9,
     title: "Landing Page",
     subtitle: "Modern Web Design",
-    description:
-      "Landing page moderna y responsiva desarrollada con Firebase para backend y Tailwind CSS para estilos. Diseño limpio y optimizado para conversiones.",
     image: "/img/project7.png",
     tech: ["firebase", "tailwind", "html"],
     codeLink: "https://github.com/JoseMurillo2711/landing",
     demoLink: "https://landing-beige-alpha-40.vercel.app/",
     category: "Web",
     highlight: "Modern Design",
-    featured: false,
-    year: "2024",
+    featured: true,
+    year: "2025",
     status: "Completed"
   }
 ];
@@ -214,6 +197,16 @@ const techIcons = {
     label: "HTML",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     color: "#e34c26"
+  },
+  vue: {
+    label: "Vue.js",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+    color: "#4fc08d"
+  },
+  php: {
+    label: "PHP",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+    color: "#777bb4"
   }
 };
 
@@ -251,15 +244,26 @@ const cardVariants = {
 };
 
 export default function ProjectsSection() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const { t } = useTranslation();
+  const [activeCategory, setActiveCategory] = useState("Web");
   const [hoveredCard, setHoveredCard] = useState(null);
 
-  const categories = ["All", ...new Set(projects.map((p) => p.category))];
+  // Merge hardcoded projects with translations
+  const translatedProjects = projects.map((project) => {
+    const projectTranslation = t(`projects.projects.${project.id - 1}`, null);
+    if (projectTranslation && typeof projectTranslation === "object") {
+      return { ...project, ...projectTranslation };
+    }
+    return project;
+  });
+
+  const allCategories = [...new Set(translatedProjects.map((p) => p.category))];
+  const categories = ["Web", ...allCategories.filter(c => c !== "Web")];
 
   const filteredProjects =
     activeCategory === "All"
-      ? projects
-      : projects.filter((p) => p.category === activeCategory);
+      ? translatedProjects
+      : translatedProjects.filter((p) => p.category === activeCategory);
 
   const projectCount = filteredProjects.length;
 
@@ -281,8 +285,8 @@ export default function ProjectsSection() {
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h2 className="title">Projects</h2>
-          <p className="muted">A selection of my best work and experiments</p>
+          <h2 className="title">{t('projects.title')}</h2>
+          <p className="muted">{t('projects.subtitle')}</p>
         </motion.div>
 
           {/* Filter Tabs */}
@@ -315,7 +319,7 @@ export default function ProjectsSection() {
               transition={{ duration: 0.3 }}
             >
               <span className="counter-number">{projectCount}</span>
-              <span className="counter-label">Projects</span>
+              <span className="counter-label">{t('projects.title')}</span>
             </motion.div>
           </div>
         {/* Projects Grid */}
@@ -385,13 +389,13 @@ export default function ProjectsSection() {
                 <div className="card-content">
                   <div className="content-header">
                     <div className="title-group">
-                      <h3 className="project-title">{project.title}</h3>
-                      <span className="project-subtitle">{project.subtitle}</span>
+                      <h3 className="project-title">{t(`projects.projects.${project.id - 1}.title`, project.title)}</h3>
+                      <span className="project-subtitle">{t(`projects.projects.${project.id - 1}.subtitle`, project.subtitle)}</span>
                     </div>
-                    <span className="highlight-tag">{project.highlight}</span>
+                    <span className="highlight-tag">{t(`projects.projects.${project.id - 1}.highlight`, project.highlight)}</span>
                   </div>
 
-                  <p className="project-description">{project.description}</p>
+                  <p className="project-description">{t(`projects.projects.${project.id - 1}.description`, project.description)}</p>
 
                   {/* Actions */}
                   <div className="card-actions">
@@ -406,7 +410,7 @@ export default function ProjectsSection() {
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
                       </svg>
-                      Code
+                      {t('projects.viewCode')}
                     </motion.a>
                     <motion.a
                       href={project.demoLink}
@@ -416,7 +420,7 @@ export default function ProjectsSection() {
                       whileHover={{ x: 3 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      View Demo
+                      {t('projects.viewDemo')}
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                       </svg>
