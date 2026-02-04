@@ -664,38 +664,82 @@
 
 @media (max-width: 480px) {
   .projects-section {
-    padding: 4rem 1rem;
+    padding: 3rem 0.75rem;
+  }
+
+  .projects-header {
+    margin-bottom: 2rem;
+  }
+
+  .filter-tabs {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .filter-tab {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .project-card {
+    margin: 0 auto;
   }
 
   .card-content {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .project-title {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+  }
+
+  .project-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .highlight-tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
   }
 
   .project-image-wrapper {
-    height: 220px;
-  }
-
-  .status-badges {
-    top: 1rem;
-    right: 1rem;
+    height: 200px;
   }
 
   .tech-stack {
-    bottom: 0.75rem;
-    left: 0.75rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
   }
 
   .tech-badge {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
   }
 
   .tech-badge img {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .card-actions {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .action-btn {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 0.85rem;
   }
 }
