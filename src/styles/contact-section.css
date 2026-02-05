@@ -1,5 +1,5 @@
 #contact {
-  width: 75%;
+  width: 100%;
   max-width: 1200px;
   margin: 3rem auto;
   color: white;
@@ -7,6 +7,7 @@
   padding: clamp(1.5rem, 3vw, 3rem);
   display: grid;
   gap: 1.5rem;
+  box-sizing: border-box;
 }
 
 .contact-header {
@@ -203,7 +204,8 @@ textarea::placeholder {
 
 @media (max-width: 768px) {
   #contact {
-    width: 90%;
+    width: 100%;
+    padding: clamp(1rem, 2vw, 1.5rem);
   }
 
   .contact-grid {
